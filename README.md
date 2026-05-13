@@ -104,7 +104,7 @@ The preset names in the config must **exactly match** the preset names you creat
 
 ### Default presets
 
-These presets are already in the must exist in WLED with these exact names:
+These presets are already in `esphome-wled-controller.yaml` and must exist in WLED with these exact names if you wish to use the same presets:
 
 - Candle Multi
 - Colorwaves
@@ -117,7 +117,7 @@ These presets are already in the must exist in WLED with these exact names:
 
 ### Adding custom presets
 
-To add a preset, create it in WLED first, then add a new entry to the `lcd_menu` section in `esp32-led-controller.yaml`:
+To add your own presets to the selection menu, create it in WLED first, then add a new entry to the `lcd_menu` section in `esphome-wled-controller.yaml`:
 
 ```yaml
 - type: command
