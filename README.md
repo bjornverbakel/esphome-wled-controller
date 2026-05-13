@@ -23,6 +23,8 @@ An ESPHome-based controller for WLED-powered LED strips, integrated with Home As
 
 ## Wiring
 
+![Wiring Schematic](https://github.com/bjornverbakel/esphome-wled-controller/blob/main/img/esphome-wled-controller-schematic.png)
+
 ### LCD (16x2, HD44780)
 
 | LCD Pin           | Connection           |
