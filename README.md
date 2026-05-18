@@ -102,7 +102,7 @@ The preset names in the config must **exactly match** the preset names you creat
 3. Go to **Presets** → save the preset with the exact name listed below
 4. Repeat for each preset you want
 
-### Presets
+### Default Presets
 
 These presets are already in `esphome-wled-controller.yaml` and must exist in WLED with these exact names if you wish to use the same presets as me:
 
