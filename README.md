@@ -102,9 +102,9 @@ The preset names in the config must **exactly match** the preset names you creat
 3. Go to **Presets** → save the preset with the exact name listed below
 4. Repeat for each preset you want
 
-### Default presets
+### Presets
 
-These presets are already in `esphome-wled-controller.yaml` and must exist in WLED with these exact names if you wish to use the same presets:
+These presets are already in `esphome-wled-controller.yaml` and must exist in WLED with these exact names if you wish to use the same presets as me:
 
 - Candle Multi
 - Colorwaves
@@ -114,6 +114,8 @@ These presets are already in `esphome-wled-controller.yaml` and must exist in WL
 - Noise 3
 - Random Colors
 - Solid
+
+These are effects simply adjusted in color and speeds to my personal liking. You can add them to WLED manually or upload the `presets.json` file into WLED.
 
 ### Adding custom presets
 
