@@ -14,10 +14,10 @@ An ESPHome-based controller for WLED-powered LED strips, integrated with Home As
 
 | Component         | Details                                                    |
 | ----------------- | ---------------------------------------------------------- |
-| Microcontroller   | Freenove ESP32 Dev Board (esp32dev, dual-core 240MHz)      |
-| Display           | 1602A QAPAS — 16x2 character LCD (HD44780, 4-bit parallel) |
-| Encoder           | GIAK KY-040 rotary encoder with push-button                |
-| Joystick          | KY-023 analog joystick with push-button (spring-return)    |
+| Microcontroller   | [Freenove ESP32 Dev Board (esp32dev, dual-core 240MHz)](https://amzn.eu/d/08tkQERI)      |
+| Display           | [1602A QAPAS — 16x2 character LCD (HD44780, 4-bit parallel)](https://amzn.eu/d/035yjVYl) |
+| Encoder           | [KY-040 rotary encoder with push-button](https://amzn.eu/d/0c5rQTaQ)                |
+| Joystick          | [KY-023 analog joystick with push-button](https://amzn.eu/d/0fTt9PCg)    |
 | Backlight control | 2N2222 NPN transistor + 1kΩ resistor                       |
 | Contrast          | 10kΩ multiturn trimmer potentiometer                       |
 
