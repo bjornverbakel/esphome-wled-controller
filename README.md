@@ -9,17 +9,38 @@ An ESPHome-based controller for WLED-powered LED strips, integrated with Home As
 - **Preset menu** — joystick opens an on-screen menu to select WLED presets
 - **LCD auto-blank** — display turns off after 10 seconds of inactivity
 - **HA connection status** — LCD shows "No HA connection" when offline
+- **3D-printable enclosure** — compact case for easy assembly
+
+![Image](https://github.com/bjornverbakel/esphome-wled-controller/blob/main/img/img1.jpg)
+
+## Requirements
+
+- ESPHome
+- Home Assistant
+- WLED integrated with Home Assistant
+- ESP32 + listed hardware components
+
+## 3D-printable enclosure
+
+You can find the MakerWorld listing here: [coming soon](https://makerworld.com/)
+
+Alternatively, the 3D files for this project are also included in this repository:
+
+- Full assembly: [`3d/esphome-wled-controller.3mf`](3d/esphome-wled-controller.3mf)
+- Individual parts: [`3d/parts/case.3mf`](3d/parts/case.3mf) and [`3d/parts/lid.3mf`](3d/parts/lid.3mf)
+
+![Image](https://github.com/bjornverbakel/esphome-wled-controller/blob/main/img/img2.jpg)
 
 ## Hardware
 
-| Component         | Details                                                    |
-| ----------------- | ---------------------------------------------------------- |
+| Component         | Details                                                                                  |
+| ----------------- | ---------------------------------------------------------------------------------------- |
 | Microcontroller   | [Freenove ESP32 Dev Board (esp32dev, dual-core 240MHz)](https://amzn.eu/d/08tkQERI)      |
 | Display           | [1602A QAPAS — 16x2 character LCD (HD44780, 4-bit parallel)](https://amzn.eu/d/035yjVYl) |
-| Encoder           | [KY-040 rotary encoder with push-button](https://amzn.eu/d/0c5rQTaQ)                |
-| Joystick          | [KY-023 analog joystick with push-button](https://amzn.eu/d/0fTt9PCg)    |
-| Backlight control | 2N2222 NPN transistor + 1kΩ resistor                       |
-| Contrast          | 10kΩ multiturn trimmer potentiometer                       |
+| Encoder           | [KY-040 rotary encoder with push-button](https://amzn.eu/d/0c5rQTaQ)                     |
+| Joystick          | [KY-023 analog joystick with push-button](https://amzn.eu/d/0fTt9PCg)                    |
+| Backlight control | 2N2222 NPN transistor + 1kΩ resistor                                                     |
+| Contrast          | 10kΩ multiturn trimmer potentiometer                                                     |
 
 ## Wiring
 
@@ -75,11 +96,19 @@ An ESPHome-based controller for WLED-powered LED strips, integrated with Home As
 | X axis           | GPIO39     |
 | SW (push-button) | GPIO25     |
 
+I recommend soldering the components onto a small perfboard for a more compact and durable setup. The rotary encoder, joystick, and LCD can be mounted on the lid of the enclosure with the screw terminals. The perfboard is mounted on the case with M2 screws, and the components are mounted on the lid with M3 screws.
+
+![Image](https://github.com/bjornverbakel/esphome-wled-controller/blob/main/img/img3.jpg)
+
+It doesn't have to be the exact same, but this is roughly what I used (though you should space the components out a bit more to make it easier to solder).
+
+![Wiring Schematic](https://github.com/bjornverbakel/esphome-wled-controller/blob/main/img/esphome-wled-controller-perfboard.png)
+
 ## Setup
 
 1. Install [ESPHome](https://esphome.io/)
-2. Copy `secrets.yaml.example` to your `secrets.yaml` and fill in the values
-3. Update the `substitutions` block at the top of `esp32-led-controller.yaml` to match your Home Assistant entity IDs:
+2. Copy [`secrets.yaml.example`](secrets.yaml.example) to your `secrets.yaml` and fill in the values
+3. Update the `substitutions` block at the top of [`esp32-led-controller.yaml`](esp32-led-controller.yaml) to match your Home Assistant entity IDs:
    ```yaml
    substitutions:
      light_entity: light.your_wled_light
@@ -104,7 +133,7 @@ The preset names in the config must **exactly match** the preset names you creat
 
 ### Default Presets
 
-These presets are already in `esphome-wled-controller.yaml` and must exist in WLED with these exact names if you wish to use the same presets as me:
+These presets are already in [`esp32-led-controller.yaml`](esp32-led-controller.yaml) and must exist in WLED with these exact names if you wish to use the same presets as me:
 
 - Candle Multi
 - Colorwaves
@@ -119,7 +148,7 @@ These are effects simply adjusted in color and speeds to my personal liking. You
 
 ### Adding custom presets
 
-To add your own presets to the selection menu, create it in WLED first, then add a new entry to the `lcd_menu` section in `esphome-wled-controller.yaml`:
+To add your own presets to the selection menu, create it in WLED first, then add a new entry to the `lcd_menu` section in [`esp32-led-controller.yaml`](esp32-led-controller.yaml):
 
 ```yaml
 - type: command
