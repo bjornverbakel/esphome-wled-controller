@@ -22,7 +22,7 @@ An ESPHome-based controller for WLED-powered LED strips, integrated with Home As
 
 ## 3D-printable enclosure
 
-You can find the MakerWorld listing here: [coming soon](https://makerworld.com/)
+You can find the MakerWorld listing [here](https://makerworld.com/en/models/3025300-wled-controller-for-home-assistant-esphome).
 
 Alternatively, the 3D files for this project are also included in this repository:
 
